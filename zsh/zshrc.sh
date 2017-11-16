@@ -39,8 +39,6 @@ alias nsda="echo ns1.daily.co.uk
             echo ns2.daily.co.uk"
 
 #Functions
-
-# For vim mappings: 
 	stty -ixon
 
 source ~/dotfiles-final/zsh/plugins/oh-my-zsh/lib/history.zsh
