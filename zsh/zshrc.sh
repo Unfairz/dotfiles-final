@@ -1,0 +1,73 @@
+# Vars
+	HISTFILE=~/.zsh_history
+	SAVEHIST=1000 
+	setopt inc_append_history # To save every command before it is executed 
+	setopt share_history # setopt inc_append_history
+
+# Aliases
+
+alias vps="ssh root@37.139.23.196"
+alias cloud="ssh unfairga@shell.gridhost.co.uk"
+alias node=/home/unfair/.nvm/versions/node/v9.0.0/bin/node
+alias npm=/home/unfair/.nvm/versions/node/v9.0.0/bin/npm
+alias ttfb='curl -o /dev/null -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n"'
+
+alias cl="clear"
+
+alias hosts="sudo nano /etc/hosts"
+
+alias nstso="echo ns1.tsohost.co.uk
+             echo ns2.tsohost.co.uk
+             echo ns3.tsohost.co.uk
+             echo
+             echo ns1.tsodns.com
+             echo ns2.tsodns.com"
+
+alias nsvida="echo Cloud:
+              echo ns1.vidacloud.co.uk
+              echo ns2.vidacloud.co.uk
+              echo ns3.vidacloud.co.uk
+              echo
+              echo cPanel:
+              echo ns1.vidahost.com
+              echo ns2.vidahost.com
+              echo
+              echo ns1.vhdns.net
+              echo ns2.vhdns.net"
+
+alias nsda="echo ns1.daily.co.uk
+            echo ns2.daily.co.uk"
+
+
+# Settings
+	export VISUAL=vim
+
+source ~/dotfiles/zsh/plugins/fixls.zsh
+
+#Functions
+
+# For vim mappings: 
+	stty -ixon
+
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
+source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/keybindings.sh
+
+# Fix for arrow-key searching
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+	autoload -U up-line-or-beginning-search
+	zle -N up-line-or-beginning-search
+	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+	autoload -U down-line-or-beginning-search
+	zle -N down-line-or-beginning-search
+	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+
+source ~/dotfiles/zsh/prompt.sh
