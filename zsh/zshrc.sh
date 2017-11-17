@@ -6,7 +6,7 @@
 
 # Aliases
 
-alias vps="ssh root@srv.unfairgaming.uk"
+alias vps="ssh unfair@droplet.unfairgaming.uk"
 alias cloud="ssh unfairga@shell.gridhost.co.uk"
 alias node=/home/unfair/.nvm/versions/node/v9.0.0/bin/node
 alias npm=/home/unfair/.nvm/versions/node/v9.0.0/bin/npm
