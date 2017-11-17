@@ -17,16 +17,18 @@
 			then
 				BUFFER="git add -A; git commit -v && git push"
 		fi
-				
+
 		zle accept-line
 	}
 	zle -N git_prepare
 	bindkey "^g" git_prepare
 
 # Sudo
-	function add_sudo() {
-		BUFFER="sudo "$BUFFER
-		zle end-of-line
-	}
-	zle -N add_sudo
-	bindkey "^s" add_sudo
+#	function add_sudo() {
+#		BUFFER="sudo "$BUFFER
+#		zle end-of-line
+#	}
+#	zle -N add_sudo
+#	bindkey "^s" add_sudo
+
+# Disabled due to bug
