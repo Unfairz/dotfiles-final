@@ -47,7 +47,7 @@ source ~/dotfiles-final/zsh/plugins/oh-my-zsh/lib/completion.zsh
 source ~/dotfiles-final/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles-final/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles-final/zsh/keybindings.sh
-
+source ~/dotfiles-final/zsh/plugins/oh-my-zsh/plugins/encode64/encode64.plugin.zsh
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
