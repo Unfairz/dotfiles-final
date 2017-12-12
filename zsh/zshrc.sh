@@ -38,6 +38,30 @@ alias nsvida="echo Cloud:
 alias nsda="echo ns1.daily.co.uk
             echo ns2.daily.co.uk"
 
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# some more aliases
+alias sl="sudo mousepad /etc/apt/sources.list"
+alias install='sudo apt install'
+alias reinstall='sudo apt-get install --reinstall'
+alias finstall='sudo apt -f install'
+alias update='sudo apt update'
+alias upgrade='sudo apt dist-upgrade'
+alias dupgrade='sudo apt update && sudo apt dist-upgrade'
+alias remove='sudo apt-get remove'
+alias autoremove='sudo apt-get autoremove'
+alias purge='sudo apt-get remove --purge'
+alias agp='sudo apt-get autoremove --purge'
+alias add='sudo add-apt-repository'
+alias search='apt-cache search'
+alias clean='sudo apt-get clean'
+alias autoclean='sudo apt-get autoclean'
+alias sinstall='sudo apt-get install --no-install-recommends'
+
 #Functions
 	stty -ixon
 
